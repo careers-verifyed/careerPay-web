@@ -1,10 +1,21 @@
-import React from 'react';
-
+import React from "react";
+import { Navbar, Footer } from "./Components";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  BrowserRouter,
+} from "react-router-dom";
 
 const Display = () => {
   return (
-    <div>Display</div>
-  )
-}
+    <>
+      <BrowserRouter>
+        <Navbar />
+        <Footer />
+      </BrowserRouter>
+    </>
+  );
+};
 
-export default Display
+export default Display;
