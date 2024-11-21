@@ -1,0 +1,104 @@
+@import "../../Styles/variables";
+
+.dFooter {
+  background-color: #161641;
+  color: #fff;
+  padding: 2rem 0;
+
+  .logoDiv {
+    max-width: 150px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .socials {
+    a {
+      font-size: 1.2rem;
+      color: $primaryColor;
+      transition: color 0.3s;
+
+      &:hover {
+        color: $btnColor;
+      }
+    }
+  }
+
+  h6 {
+    color: $primaryColor;
+  }
+
+  .list-unstyled {
+    padding: 0;
+
+    li {
+      margin-bottom: 0.5rem;
+
+      a {
+        color: $primaryColor;
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+          color: $primaryColor;
+        }
+      }
+    }
+  }
+
+  .newsletter {
+    .input-group {
+      position: relative;
+
+      input {
+        border-radius: 0.25rem;
+        padding: 0.5rem;
+        border: none;
+        background-color: #454567;
+        color: #fff;
+
+        ::placeholder{
+            color: #fff !important;
+        }
+      }
+
+      .input-group-text {
+        background-color: #454567;
+        border: none;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        &:hover {
+          background-color: $quinaryColor;
+        }
+
+        svg {
+          font-size: 1.2rem;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+    .logoDiv {
+      margin: 0 auto;
+    }
+  
+    .socials {
+      justify-content: center;
+    }
+  
+    .list-unstyled li {
+      text-align: center;
+    }
+  
+    .newsletter {
+      text-align: center;
+    }
+  }
+  

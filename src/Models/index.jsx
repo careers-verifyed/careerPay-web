@@ -1,8 +1,8 @@
-import Navbar from "./Navbar/Navbar";
-import Footer from "./Footer/Footer";
+import NavbarModel from "./Navbar/NavbarModel";
+import FooterModel from "./Footer/FooterModel";
 
 
 export {
-    Navbar,
-    Footer
+    NavbarModel,
+    FooterModel
 }

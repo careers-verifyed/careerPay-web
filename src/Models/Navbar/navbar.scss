@@ -1,0 +1,65 @@
+@import "../../Styles/variables";
+
+.navbar {
+  &-brand {
+    max-width: 200px;
+    img {
+      width: 100%;
+    }
+  }
+
+  &-toggler {
+    border: none !important;
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &-nav {
+    gap: 20px;
+
+    .nav-link {
+      color: $primaryColor;
+      text-decoration: none;
+
+      &.active {
+        font-weight: bold;
+        color: $btnColor;
+      }
+
+      &:hover {
+        color: $quinaryColor;
+      }
+    }
+  }
+
+  .navLast {
+    .loginBtn {
+      color: $quinaryColor;
+      text-decoration: none;
+    }
+
+    .signupBtn {
+      background-color: $btnColor;
+      border: none;
+      padding: 10px 30px;
+      border-radius: 5px;
+      color: $primaryColor;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $quinaryColor;
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .signupBtn {
+    padding: 8px 16px;
+  }
+  .navbar-nav {
+    gap: 5px;
+  }
+}

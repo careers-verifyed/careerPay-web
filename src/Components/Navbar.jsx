@@ -1,8 +1,11 @@
-import React from 'react'
+import React from 'react';
+import { NavbarModel } from '../Models';
 
 const Navbar = () => {
   return (
-    <div>Navbar</div>
+    <>
+        <NavbarModel />
+    </>
   )
 }
 
