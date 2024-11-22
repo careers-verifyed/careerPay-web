@@ -2,7 +2,7 @@ import React from "react";
 import "./footer.scss";
 import {
   FaInstagram,
-  FaBehance,
+  FaDribbble,
   FaSquareXTwitter,
   FaYoutube,
 } from "react-icons/fa6";
@@ -14,7 +14,7 @@ const Footer = () => {
   return (
     <footer className="dFooter">
       <div className="container text-center text-md-start mt-5">
-        <div className="row bringDown">
+        <div className="row">
           {/* Logo and Social Links */}
           <motion.div
             className="col-md-3 col-lg-4 mb-4 text-center text-md-start"
@@ -28,18 +28,42 @@ const Footer = () => {
             <p>Copyright © 2024 Careers Verified.</p>
             <p>All rights reserved</p>
             <div className="socials d-flex justify-content-center justify-content-md-start">
-              <a href="#!" className="me-4 text-reset">
+              <motion.a
+                href="#!"
+                className="me-4 text-reset social-icon"
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ duration: 0.3 }}
+              >
                 <FaInstagram />
-              </a>
-              <a href="#!" className="me-4 text-reset">
-                <FaBehance />
-              </a>
-              <a href="#!" className="me-4 text-reset">
+              </motion.a>
+              <motion.a
+                href="#!"
+                className="me-4 text-reset social-icon"
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ duration: 0.3 }}
+              >
+                <FaDribbble />
+              </motion.a>
+              <motion.a
+                href="#!"
+                className="me-4 text-reset social-icon"
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ duration: 0.3 }}
+              >
                 <FaSquareXTwitter />
-              </a>
-              <a href="#!" className="me-4 text-reset">
+              </motion.a>
+              <motion.a
+                href="#!"
+                className="me-4 text-reset social-icon"
+                whileHover={{ scale: 1.2 }}
+                whileTap={{ scale: 0.9 }}
+                transition={{ duration: 0.3 }}
+              >
                 <FaYoutube />
-              </a>
+              </motion.a>
             </div>
           </motion.div>
 

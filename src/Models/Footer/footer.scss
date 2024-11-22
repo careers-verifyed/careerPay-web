@@ -1,9 +1,10 @@
-@import "../../Styles/variables";
+@use '../../Styles/variables' as *;
+
 
 .dFooter {
   background-color: #161641;
   color: #fff;
-  padding: 2rem 0;
+  padding: 3rem 0;
 
   .logoDiv {
     max-width: 150px;

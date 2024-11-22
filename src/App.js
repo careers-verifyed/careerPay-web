@@ -1,4 +1,5 @@
 import Display from "./Display";
+import "./App.scss";
 
 function App() {
   return (

@@ -1,0 +1,92 @@
+@use '../../Styles/variables' as *;
+
+.downModel {
+  background-color: #161641;
+  padding: 2rem 0;
+
+  &__content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+
+    .downModelText {
+      color: #fff;
+      margin-bottom: 2rem;
+
+      h2 {
+        font-size: $headingSize;
+        font-weight: $tertiaryWeight;
+        font-family: $secondaryFont;
+        line-height: 1.4;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: $mediumFSizeMobile;
+        font-weight: $lowerWeight;
+        font-family: $secondaryFont;
+      }
+    }
+
+    .downModelCard {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-top: 2rem;
+
+      &__item {
+        flex: 1 1 32%;
+        min-width: 280px;
+        max-width: 32%;
+        padding: 1rem;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+
+  .downModel__display {
+    margin-top: 4rem;
+    padding: 2rem 0; 
+    background-color: #1a1a55; 
+
+    .downModelText {
+      color: #fff;
+      margin-bottom: 2rem;
+
+      h3 {
+        font-size: $headingSize;
+        font-weight: $tertiaryWeight;
+        font-family: $secondaryFont;
+        line-height: 1.4;
+      }
+    }
+
+    .downModelDisplay {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+
+      &__item {
+        flex: 1 1 32%;
+        min-width: 280px;
+        max-width: 32%;
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+
+  // Responsive styling for smaller screens
+  @media (max-width: 768px) {
+    .downModel__content,
+    .downModel__display {
+      .downModelCard,
+      .downModelDisplay {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  }
+}

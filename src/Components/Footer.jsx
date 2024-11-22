@@ -3,9 +3,9 @@ import { FooterModel } from "../Models"
 
 const Footer = () => {
   return (
-    <div>
+    <>
         <FooterModel />
-    </div>
+    </>
   )
 }
 

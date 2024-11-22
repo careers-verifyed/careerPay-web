@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import "../src/Styles/variables";
+
+
+body {
+    font-family: $secondaryFont;
+    font-size: 16px; 
+    line-height: 1.6; 
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $primaryFont;
+    font-weight: 600; 
+  }
+  
+  p, a, li {
+    font-family: $secondaryFont;
+    font-weight: 400;
+  }
+
+  
+  
