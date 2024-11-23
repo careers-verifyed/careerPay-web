@@ -1,5 +1,5 @@
 import React from 'react'
-import { DownDisplayPage, HeroPage, LearnPage, DownPage } from '../Components'
+import { DownDisplayPage, HeroPage, LearnPage, DownPage, DetailsPage } from '../Components'
 
 const Home = () => {
   return (
@@ -8,6 +8,7 @@ const Home = () => {
         <DownPage />
         <LearnPage />
         <DownDisplayPage />
+        <DetailsPage />
     </div>
   )
 }

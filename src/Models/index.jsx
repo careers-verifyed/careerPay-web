@@ -4,6 +4,7 @@ import HeroModel  from "./HeroPage/HeroModel";
 import DownModel from "./DownPage/DownModel";
 import LearnModel from "./LearnPage/LearnModel";
 import DownDisplayModel from "./DownPage/DownDisplayModel";
+import DetailsModel from "./Details/DetailsModel";
 import Card from "./Card/Card";
 
 export {
@@ -13,5 +14,6 @@ export {
     DownModel,
     LearnModel,
     DownDisplayModel,
+    DetailsModel,
     Card,
 }

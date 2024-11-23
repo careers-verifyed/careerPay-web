@@ -4,6 +4,7 @@ import HeroPage from "./HeroPage";
 import DownPage from "./DownPage";
 import LearnPage from "./LearnPage";
 import DownDisplayPage from "./DownDisplayPage";
+import DetailsPage from "./DetailsPage";
 
 export {
     Footer,
@@ -11,5 +12,6 @@ export {
     HeroPage,
     DownPage,
     LearnPage,
-    DownDisplayPage
+    DownDisplayPage,
+    DetailsPage,
 }

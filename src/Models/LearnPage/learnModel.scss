@@ -1,2 +1,65 @@
 @use '../../Styles/variables' as *;
 
+.learnModel {
+  background-color: #161641;
+  padding: 2rem;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: 0 auto;
+
+    &__left {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+        img {
+            width: 100%;
+            max-width: 500px;
+          }
+    }
+
+    &__right {
+      flex: 1;
+      color: #fff;
+      h2 {
+        font-size: $headingSize;
+        line-height: 1.5;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: $mediumFSizeMobile;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    &__container {
+      padding: 0 1rem;
+    }
+  }
+
+  @media (max-width: 992px) {
+    &__container {
+      flex-direction: column;
+      text-align: center;
+
+      &__right {
+        h2 {
+          font-size: 1.8rem; 
+        }
+
+        p {
+          font-size: $smallFSizeMobile;
+        }
+      }
+    }
+  }
+}
