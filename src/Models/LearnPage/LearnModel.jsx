@@ -1,10 +1,9 @@
 import React from 'react';
 import './learnModel.scss';
-import { Svg1 } from '../../assets';
 import { Buttons } from '../../utils';
 import { motion } from 'framer-motion';
 
-const LearnModel = ({ headingTitle, paragraphTitle }) => {
+const LearnModel = ({ headingTitle, paragraphTitle, DisplaySvg, containerClass }) => {
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
@@ -22,10 +21,10 @@ const LearnModel = ({ headingTitle, paragraphTitle }) => {
       animate="visible"
       variants={containerVariants}
     >
-      <div className="learnModel__container">
+      <div className={containerClass}>
         {/* Left Section: Image */}
         <motion.div className="learnModel__container__left" variants={imageVariants}>
-          <img src={Svg1} alt="Representation of Career Pay concept" />
+          <img src={DisplaySvg} alt="Representation of Career Pay concept" />
         </motion.div>
 
         {/* Right Section: Text Content */}

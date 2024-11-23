@@ -1,1 +1,115 @@
 @use '../../Styles/variables' as *;
+
+.detailsModel {
+  padding: 2rem 1rem;
+  background-color: #f9f9f9;
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    margin-bottom: 2rem;
+
+    h2 {
+      font-size: clamp(1.8rem, 2vw, 2.5rem); 
+      font-weight: 700;
+      color: #3458EB;
+      line-height: 1.4;
+      span{
+        color: #4D4D4D;
+      }
+    }
+
+    p {
+      font-size: clamp(1rem, 1.5vw, 1.2rem); 
+      color: #18191F;
+      text-shadow: 0px 4px 4px #00000040;
+      max-width: 1000px; 
+      margin: 0 auto;
+    }
+  }
+
+  &__algo {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 1.5rem;
+    margin-top: 2rem;
+    width: 100%;
+
+    &__item {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1.5rem;
+      display: flex;
+      align-items: center;
+      text-align: left;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      cursor: pointer;
+
+      &:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        transform: translateY(-5px); 
+      }
+
+      .algo__item {
+        font-size: 3rem; 
+        color: #3458eb;
+        margin-right: 1rem;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: #2738c8; 
+        }
+      }
+
+      .algo__details {
+        h3 {
+          font-size: clamp(1.2rem, 1.5vw, 1.8rem); 
+          font-weight: bold;
+          color: #4D4D4D;
+        }
+
+        p {
+          font-size: clamp(0.9rem, 1vw, 1rem); 
+          color: #4D4D4D;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 859px) {
+    .detailsModel__container{
+        flex-direction: column;
+    }
+    &__title {
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 0.9rem;
+      }
+    }
+
+    &__algo__item {
+      flex-direction: column; 
+      text-align: center;
+      
+
+      .algo__item {
+        margin: 0 0 1rem; 
+      }
+    }
+  }
+  @media (max-width: 480px) {
+    .detailsModel__container{
+        flex-direction: column;
+    }
+  }
+}
