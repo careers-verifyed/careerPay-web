@@ -74,6 +74,18 @@
         max-width: 32%;
         display: flex;
         justify-content: center;
+        .display-description{
+            color: $btnColor;
+        }
+        .icon-style {
+            margin-left: 0.5rem;
+            font-size: $mediumFSize;
+            color: $btnColor;
+      
+            @media (max-width: 768px) {
+              font-size: $mediumFSizeMobile;
+            }
+          }
       }
     }
   }

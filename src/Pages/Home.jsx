@@ -1,17 +1,28 @@
-import React from 'react'
-import { DownDisplayPage, HeroPage, LearnPage, DownPage, DetailsPage, HelpPage } from '../Components'
+import React from "react";
+import {
+  DownDisplayPage,
+  HeroPage,
+  LearnPage,
+  DownPage,
+  DetailsPage,
+  HelpPage,
+  ReviewPage,
+  DemoPage,
+} from "../Components";
 
 const Home = () => {
   return (
     <div>
-        <HeroPage />
-        <DownPage />
-        <LearnPage />
-        <DownDisplayPage />
-        <DetailsPage />
-        <HelpPage />
+      <HeroPage />
+      <DownPage />
+      <LearnPage />
+      <DetailsPage />
+      <HelpPage />
+      <ReviewPage />
+      <DownDisplayPage />
+      <DemoPage />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

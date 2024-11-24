@@ -1,76 +1,90 @@
-@import "../../Styles/variables";
+@use '../../Styles/variables' as *;
 
+
+// Base button styles
+button {
+  font-family: $primaryFont;
+  font-weight: $secondaryWeight;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  border-radius: 4px;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+// Big Button
 .bigBtn {
-    padding: 12px 24px;
-    font-size: 16px;
-    font-weight: 700;
-    border: none;
-    border-radius: 4px;
-    background-color: #007bff;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+  padding: 12px 24px;
+  font-size: $mediumFSize;
+  font-weight: $primaryWeight;
+  background-color: $btnColor;
+  color: white;
+  border-radius: 10px;
 
-    :hover {
-        background-color: #0056b3;
-        transform: scale(1.05);
-    }
+  &:hover {
+    background-color: darken($btnColor, 10%);
+  }
 }
 
+// Small Button
 .smallBtn {
-    padding: 12px 24px;
-    font-size: 16px;
-    font-weight: bold;
-    text-transform: uppercase;
-    border: 2px solid #007bff;
-    background-color: transparent;
-    color: #007bff;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 10px 20px;
+  font-size: $mediumFSizeMobile;
+  font-weight: $secondaryWeight;
+  text-transform: uppercase;
+  border: 2px solid $btnColor;
+  background-color: transparent;
+  color: $btnColor;
 
-    :hover {
-        background-color: #007bff;
-        color: white;
-    }
-}
-
-.btnIcon {
-    background-color: #007bff;
+  &:hover {
+    background-color: $btnColor;
     color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 50%;
-    font-size: 1.2rem;
-    cursor: pointer;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s ease;
-    :hover {
-        background-color: #007bff;
-    }
-    svg {
-        margin-right: 5px;
-    }
+  }
 }
 
-.btnOutline{
-    padding: 12px 24px;
-    font-size: 16px;
-    font-weight: 400;
-    background-color: transparent;
-    color: #000;
-    border: none;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    cursor: pointer;
-    border-radius: 4px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    :hover {
-        background-color: $tertiaryColor;
-        color: white;
-    }
+// Icon Button
+.btnIcon {
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: $mediumFSize;
+  border-radius: 50%;
+  background-color: $btnColor;
+  color: white;
+
+  svg {
+    font-size: $mediumFSizeMobile;
+  }
+
+  &:hover {
+    background-color: darken($btnColor, 10%);
+  }
+}
+
+// Outline Button
+.btnOutline {
+  padding: 10px 24px;
+  font-size: $mediumFSize;
+  font-weight: $tertiaryWeight;
+  background-color: transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: $secondaryColor;
+
+  &:hover {
+    background-color: $btnColor;
+    color: white;
+  }
+}
+
+@media (max-width: 768px) {
+    .bigBtn {
+        padding: 8px 16px;
+      }
 }

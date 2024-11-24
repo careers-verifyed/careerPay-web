@@ -7,12 +7,14 @@ const Display = () => {
   return (
     <Router>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/faq" element={<FAQ />} />
-        <Route path="/testimonials" element={<Testimonials />} />
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="/testimonials" element={<Testimonials />} />
+        </Routes>
+      </main>
       <Footer />
     </Router>
   );

@@ -13,6 +13,7 @@
     svg {
       width: 24px;
       height: 24px;
+      color: #007bff;
     }
   }
 
@@ -20,17 +21,21 @@
     gap: 20px;
 
     .nav-link {
-      color: $primaryColor;
       text-decoration: none;
+      color: #555; 
+      font-weight: 400; 
+      transition: color 0.3s ease-in-out;
 
       &.active {
         font-weight: bold;
         color: $btnColor;
       }
 
-      &:hover {
-        color: $quinaryColor;
-      }
+
+        &:hover {
+          color: #007bff; 
+          text-decoration: none; 
+        }
     }
   }
 

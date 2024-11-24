@@ -9,21 +9,25 @@ const HeroModel = () => {
     <div className="heroModel">
       <div className="heroModel-container">
         <div className="text-section">
-          <h1>Simplifying <span>Compensation</span> Management for Startups</h1>
+          <h1>
+            Simplifying <span>Compensation</span> Management for Startups
+          </h1>
           <p>
             Empowering startups with Talent financing and growth-stage companies
             with credit financing
           </p>
           <div className="button-group">
-            <Buttons textSite="Get Started" />
+          <Buttons type="big" content="Get Started" backColor="#3458EB" textColor="#FFF" />
             <Buttons
-              IconOutlineSite={
+              type="outline"
+              content={
                 <>
-                  Explore <MdSend className="icon-style" />
+                  Explore More <MdSend className="icon-style" />
                 </>
               }
+              textColor="#161641"
+              backColor="transparent"
             />
-
           </div>
         </div>
         <div className="image-section">
