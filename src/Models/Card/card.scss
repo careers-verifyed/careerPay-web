@@ -1,45 +1,89 @@
 @use '../../Styles/variables' as *;
 
-
 .card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: #21215c;
+  color: #fff;
+  transition: transform 0.3s;
+
+  &-body {
     display: flex;
     flex-direction: column;
-    border-radius: 8px;
-    padding: 1rem;
-    background-color: #21215c;
-    color: #fff;
-    transition: transform 0.3s;
-  
-    &-body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-      height: 100%;
-    }
-  
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  .card-title {
+    font-size: 1.1rem;
+    font-weight: $primaryWeight;
+    margin-bottom: 0.5rem;
+  }
+
+  .card-description {
+    font-size: $mediumFSizeMobile;
+    font-weight: $lowerWeight;
+    text-align: center;
+    flex-grow: 1;
+  }
+
+  &.design1 {
     .card-title {
-      font-size: 1.1rem;
-      font-weight: $primaryWeight;
-      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+      font-weight: $secondaryWeight;
     }
-  
-    .card-description {
-      font-size: $mediumFSizeMobile;
-      font-weight: $lowerWeight;
-      text-align: center;
-      flex-grow: 1;
-    }
-  
-    &.display {
-      .card-title {
-        font-size: 1.2rem;
-        font-weight: $secondaryWeight;
-      }
-    }
-  
+
     &:hover {
       transform: scale(1.05);
     }
   }
-  
+
+  &.design2 {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 300px;
+    max-width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+
+    .card-content-alt {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+      padding: 1rem;
+    }
+
+    .card-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #fff;
+      z-index: 1;
+    }
+
+    .card-title-alt {
+      font-size: 1.5rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+      z-index: 2;
+    }
+
+    .card-description-alt {
+      font-size: 1rem;
+      font-weight: normal;
+      z-index: 2;
+    }
+  }
+}

@@ -21,7 +21,7 @@
   }
 
   &__img {
-    flex: 1;
+    flex: 2;
 
     img {
       width: 100%;
@@ -39,27 +39,27 @@
     gap: 1rem;
     font-family: $primaryFont;
 
-    &__quote {
+    .reviewModelQuote {
       font-size: $mediumFSize;
       line-height: 1.6;
-      color: $secondaryColor;
-      font-style: italic;
+      color: $quaternaryColor;
 
       @media (max-width: 768px) {
         font-size: $mediumFSizeMobile;
       }
     }
 
-    &__author {
+    .reviewModelAuthor {
       font-size: $headingSize;
       font-weight: $primaryWeight;
-      color: $secondaryColor;
+      color: #3458EB;
+
       @media (max-width: 768px) {
         font-size: $headingSizeMobile;
       }
     }
 
-    &__designation {
+    .reviewModelDesignation {
       font-size: $mediumFSize;
       color: $quaternaryColor;
       font-weight: $higherWeight;

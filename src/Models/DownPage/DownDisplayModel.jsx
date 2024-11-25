@@ -24,32 +24,33 @@ const DownDisplayModel = () => {
   ];
 
   return (
-    <>
-      <div className="downModel">
-        <div className="downModel__display">
-          <div className="downModelText text-center">
-            <h3>
-              Stay updated with industry trends and tips to <br /> improve
-              compensation management and talent <br /> retention.
-            </h3>
-          </div>
-          <div className="downModelDisplay">
-            {cardsDisplayData.map((display, index) => (
-              <div className="downModelDisplay__item" key={index}>
-                <Card img={display.img} title={display.title} displayType="display">
-                  <div className="card-box">
-                    <h4 className="display-title">{display.title}</h4>
-                    <p className="display-description">
-                      {display.description} <FaArrowRightLong className="icon-style" />
-                    </p>
-                  </div>
-                </Card>
-              </div>
-            ))}
-          </div>
+    <div className="downModel">
+      <div className="downModel__display">
+        {/* Header Text */}
+        <div className="downModelText text-center">
+          <h3>
+            Stay updated with industry trends and tips to <br /> improve
+            compensation management and talent <br /> retention.
+          </h3>
+        </div>
+
+        {/* Cards Section */}
+        <div className="downModelDisplay">
+          {cardsDisplayData.map((display, index) => (
+            <div className="downModelDisplay__item" key={index}>
+              <Card img={display.img} title={display.title} designType="design2">
+                <div className="card-text-content">
+                  <h4 className="card-text-title">{display.title}</h4>
+                  <p className="card-text-description">
+                    {display.description} <FaArrowRightLong className="icon-style" />
+                  </p>
+                </div>
+              </Card>
+            </div>
+          ))}
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

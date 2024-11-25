@@ -61,6 +61,7 @@ const DownModel = () => {
                 img={card.img}
                 title={card.title}
                 description={card.description}
+                designType="design1"
               />
             </motion.div>
           ))}

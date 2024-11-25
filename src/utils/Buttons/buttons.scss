@@ -76,6 +76,7 @@ button {
   align-items: center;
   gap: 10px;
   color: $secondaryColor;
+  border-radius: 10px;
 
   &:hover {
     background-color: $btnColor;
