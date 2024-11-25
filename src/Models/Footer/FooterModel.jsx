@@ -11,33 +11,11 @@ import { Logo } from "../../assets";
 import { motion } from "framer-motion";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear();
   return (
     <footer className="dFooter">
       <div className="container text-center text-md-start mt-5">
         <div className="row">
-          {/* Newsletter Section - Order adjusted */}
-          <motion.div
-            className="col-md-4 col-lg-3 mb-4 order-1 order-md-4"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.4 }}
-          >
-            <h6 className="fw-bold mb-4">Stay up to date</h6>
-            <form className="newsletter">
-              <div className="input-group">
-                <input
-                  type="email"
-                  className="form-control"
-                  placeholder="Your email address"
-                  aria-label="Email"
-                />
-                <span className="input-group-text">
-                  <TbSend />
-                </span>
-              </div>
-            </form>
-          </motion.div>
-
           {/* Logo and Social Links */}
           <motion.div
             className="col-md-3 col-lg-4 mb-4 text-center text-md-start order-2"
@@ -48,7 +26,7 @@ const Footer = () => {
             <div className="logoDiv mb-4">
               <img src={Logo} alt="Company Logo" />
             </div>
-            <p>Copyright © 2024 Careers Verified.</p>
+            <p>Copyright © {currentYear} Careers Verified.</p>
             <p>All rights reserved</p>
             <div className="socials d-flex justify-content-center justify-content-md-start">
               <motion.a
@@ -122,6 +100,28 @@ const Footer = () => {
               <li><a href="#!" className="text-reset">Privacy Policy</a></li>
               <li><a href="#!" className="text-reset">Status</a></li>
             </ul>
+          </motion.div>
+                    {/* Newsletter Section - Order adjusted */}
+                    <motion.div
+            className="col-md-4 col-lg-3 mb-4 order-1 order-md-4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.4 }}
+          >
+            <h6 className="fw-bold mb-4">Stay up to date</h6>
+            <form className="newsletter">
+              <div className="input-group">
+                <input
+                  type="email"
+                  className="form-control"
+                  placeholder="Your email address"
+                  aria-label="Email"
+                />
+                <span className="input-group-text">
+                  <TbSend />
+                </span>
+              </div>
+            </form>
           </motion.div>
         </div>
       </div>

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import "./demoModel.scss";
 import { Buttons } from "../../utils";
 
-const DemoModel = () => {
+const DemoModel = ({content}) => {
   // Animation Variants
   const containerVariants = {
     hidden: { opacity: 0, y: 50 },
@@ -39,8 +39,7 @@ const DemoModel = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            We simplify talent financing, ESOPs, and <br /> payroll to support
-            career growth.
+            {content}
           </motion.h2>
 
           {/* Button Animation */}

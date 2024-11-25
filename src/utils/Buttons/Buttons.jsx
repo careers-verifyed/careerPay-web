@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 import "./buttons.scss";
 
 const Buttons = ({
@@ -6,7 +7,9 @@ const Buttons = ({
   content, // Button text or JSX content
   style = {}, // Inline styles
   textColor = "inherit", // Text color (default to inherit)
-  backColor = "transparent", // Background color (default to transparent)
+  backColor = "transparent", // Background color
+  whileHover = { scale: 1.1 }, // Hover animation
+  whileTap = { scale: 0.95 }, // Tap animation
 }) => {
   // Map button types to their CSS classes
   const buttonTypes = {
@@ -20,16 +23,18 @@ const Buttons = ({
   const buttonClass = buttonTypes[type] || buttonTypes.big;
 
   return (
-    <button
+    <motion.button
       className={buttonClass}
       style={{
         ...style,
         color: textColor,
         backgroundColor: backColor,
       }}
+      whileHover={whileHover} // Apply hover animation
+      whileTap={whileTap} // Apply tap animation
     >
       {content}
-    </button>
+    </motion.button>
   );
 };
 

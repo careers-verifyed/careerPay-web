@@ -27,6 +27,7 @@ const HeroModel = () => {
               }
               textColor="#161641"
               backColor="transparent"
+              whileTap={{ scale: 0.9, backgroundColor: "#1234a6" }}
             />
           </div>
         </div>
