@@ -101,5 +101,10 @@
     .newsletter {
       text-align: center;
     }
+    .row {
+      .col-md-4 {
+        order: -1; 
+      }
+    }
   }
   
