@@ -1,4 +1,4 @@
-@use '../../Styles/variables' as *;
+@use "../../Styles/variables" as *;
 
 .downModel {
   background-color: #161641;
@@ -46,49 +46,6 @@
     }
   }
 
-  .downModel__display {
-    margin-top: 4rem;
-    padding: 2rem 0; 
-
-    .downModelText {
-      color: #fff;
-      margin-bottom: 2rem;
-
-      h3 {
-        font-size: $headingSize;
-        font-weight: $tertiaryWeight;
-        font-family: $secondaryFont;
-        line-height: 1.4;
-      }
-    }
-
-    .downModelDisplay {
-      display: flex;
-      justify-content: space-between;
-      gap: 1rem;
-
-      &__item {
-        flex: 1 1 32%;
-        min-width: 280px;
-        max-width: 32%;
-        display: flex;
-        justify-content: center;
-        .display-description{
-            color: $btnColor;
-        }
-        .icon-style {
-            margin-left: 0.5rem;
-            font-size: $mediumFSize;
-            color: $btnColor;
-      
-            @media (max-width: 768px) {
-              font-size: $mediumFSizeMobile;
-            }
-          }
-      }
-    }
-  }
-
   // Responsive styling for smaller screens
   @media (max-width: 768px) {
     .downModel__content,
@@ -100,4 +57,80 @@
       }
     }
   }
+
+  .downModel__display {
+    margin-top: 4rem;
+    padding: 2rem 0;
+  
+    h3 {
+      color: #fff;
+      margin-bottom: 2rem;
+      font-size: $headingSize;
+      font-weight: $tertiaryWeight;
+      font-family: $secondaryFont;
+      line-height: 1.4;
+    }
+  
+    .downModel__cards {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap; 
+      gap: 1rem; 
+      padding: 20px;
+  
+      .downModel__card {
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        max-width: 400px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+        }
+  
+        &__text {
+          padding: 1rem;
+          text-align: center;
+        }
+  
+        .downModel__card__title {
+          font-size: 1.25rem;
+          font-weight: 600;
+          margin-bottom: 0.5rem;
+          color: #333;
+        }
+  
+        .downModel__card__description {
+          font-size: 1rem;
+          color: #007bff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 0.5rem;
+  
+          .icon-style {
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+  
+            &:hover {
+              color: #0056b3;
+            }
+          }
+        }
+  
+        &__img {
+          width: 100%;
+          height: 200px;
+          object-fit: cover; 
+        }
+      }
+    }
+  }
+  
 }
