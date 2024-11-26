@@ -93,18 +93,19 @@
     .socials {
       justify-content: center;
     }
-  
+    .row {
+      .col-md-4 {
+        order: -1; 
+      }
+    }
+  }
+  @media (max-width: 768px) {
     .list-unstyled li {
       text-align: center;
     }
   
     .newsletter {
       text-align: center;
-    }
-    .row {
-      .col-md-4 {
-        order: -1; 
-      }
     }
   }
   

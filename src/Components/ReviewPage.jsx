@@ -1,12 +1,15 @@
-import React from 'react';
-import { ReviewModel } from '../Models';
+import React from 'react'; // Importing the React library to use JSX
+import { ReviewModel } from '../Models'; // Importing the ReviewModel component, which contains the review-related content
 
+// Defining the ReviewPage component
 const ReviewPage = () => {
   return (
     <div>
-        <ReviewModel />
+      {/* Rendering the ReviewModel component inside the ReviewPage */}
+      <ReviewModel /> 
     </div>
-  )
-}
+  );
+};
 
-export default ReviewPage
+// Exporting the ReviewPage component to be used in other parts of the application
+export default ReviewPage;

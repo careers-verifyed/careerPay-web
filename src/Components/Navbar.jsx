@@ -1,12 +1,15 @@
-import React from 'react';
-import { NavbarModel } from '../Models';
+import React from 'react'; // Importing the React library to use JSX
+import { NavbarModel } from '../Models'; // Importing the NavbarModel component, which is the actual navigation model being used
 
+// Defining the Navbar component
 const Navbar = () => {
   return (
     <>
-        <NavbarModel />
+      {/* Rendering the NavbarModel component inside the Navbar */}
+      <NavbarModel /> 
     </>
-  )
-}
+  );
+};
 
-export default Navbar
+// Exporting the Navbar component to be used in other parts of the application
+export default Navbar;
